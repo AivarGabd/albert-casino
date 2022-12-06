@@ -106,18 +106,20 @@ export default function Home() {
         alignItems: 'center',
         height: '80vh'
       }}>
-        <Card css={{ mw: "500px" }}>
-          <Card.Body>
-            <article>
-              <Text h1 css={{
-                lineHeight: 'normal'
-              }}>Актуальное зеркало <span style={{ color: '#eb273f' }}>Starda</span></Text>
-            </article>
-            <Text h4>
-              <Link block isExternal href={link} color="secondary">Перейти на сайт казино</Link>
-            </Text>
-          </Card.Body>
-        </Card>
+        <Link href={link}>
+          <Card css={{ mw: "500px" }} isPressable isHoverable>
+            <Card.Body>
+              <article>
+                <Text h1 css={{
+                  lineHeight: 'normal'
+                }}>Актуальное зеркало <span style={{ color: '#eb273f' }}>Starda</span></Text>
+              </article>
+              <Text h4>
+                <Link block isExternal href={link} color="secondary">Перейти на сайт казино</Link>
+              </Text>
+            </Card.Body>
+          </Card>
+        </Link>
       </div>
       <div style={{
         width: '100vw',
