@@ -1,7 +1,7 @@
 import { Navbar, Button, Link, Text, Card, Radio, Badge } from "@nextui-org/react";
 import { AiOutlineLogin } from 'react-icons/ai'
 const link = 'https://strd-irrs01.com/c27d7c9c6'
-
+import { useRouter } from 'next/router'
 
 const navbarElements = [
   {
@@ -46,6 +46,9 @@ const textArray = [
 
 
 export default function Home() {
+
+  const router = useRouter()
+
   return (
     <div>
       <Navbar isBordered variant={'floating'}>
@@ -106,20 +109,24 @@ export default function Home() {
         alignItems: 'center',
         height: '80vh'
       }}>
-        <Link href={link}>
-          <Card css={{ mw: "500px" }} isPressable isHoverable>
-            <Card.Body>
-              <article>
-                <Text h1 css={{
-                  lineHeight: 'normal'
-                }}>Актуальное зеркало <span style={{ color: '#eb273f' }}>Starda</span></Text>
-              </article>
-              <Text h4>
-                <Link block isExternal href={link} color="secondary">Перейти на сайт казино</Link>
-              </Text>
-            </Card.Body>
-          </Card>
-        </Link>
+        <Card
+          css={{ mw: "500px" }}
+          isPressable
+          isHoverable
+          onPress={() => {
+            router.push(link)
+          }}>
+          <Card.Body>
+            <article>
+              <Text h1 css={{
+                lineHeight: 'normal'
+              }}>Актуальное зеркало <span style={{ color: '#eb273f' }}>Starda</span></Text>
+            </article>
+            <Text h4>
+              <Link block isExternal href={link} color="secondary">Перейти на сайт казино</Link>
+            </Text>
+          </Card.Body>
+        </Card>
       </div>
       <div style={{
         width: '100vw',
