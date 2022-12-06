@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider>
       <Head>
-        <title>Актуальное зеркало Starda</title>
+        <title>Старда Казино (Starda) - актуальное зеркало</title>
       </Head>
 
       <Component {...pageProps} />
