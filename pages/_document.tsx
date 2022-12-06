@@ -16,7 +16,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {CssBaseline.flush()}
-          <title>Актуальное зеркало Starda</title>
           <link rel="shortcut icon" href="./icon-svg.svg" />
           </Head>
         <body>
