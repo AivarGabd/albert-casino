@@ -2,6 +2,7 @@ import { Navbar, Button, Link, Text, Card, Radio, Badge } from "@nextui-org/reac
 import { AiOutlineLogin } from 'react-icons/ai'
 const link = 'https://strd-irrs01.com/c27d7c9c6'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 
 const navbarElements = [
   {
@@ -51,6 +52,23 @@ export default function Home() {
 
   return (
     <div>
+
+      <div className="container">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TQGWFJZZXZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TQGWFJZZXZ');
+        `}
+        </Script>
+      </div>
+
       <Navbar isBordered variant={'floating'}>
         <Navbar.Brand>
 
